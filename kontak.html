@@ -1,31 +1,47 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak - SMK AMT</title>
-
+    <title>Document</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         nav {
             background-color: rgb(2, 0, 148);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        ul li a { color: white; text-decoration: none; }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
         .navlink {
             display: flex;
             list-style: none;
             gap: 15px;
             padding: 10px;
         }
-        header { color: white; font-size: 15px; padding: 10px; }
+
+        header {
+            color: white;
+            font-size: 15px;
+            padding: 10px;
+        }
         .menu {
             position: relative;
             padding: 8px 12px;
+            text-decoration: none;
             color: #ffffff;
         }
+
         .menu::after {
             content: "";
             position: absolute;
@@ -34,57 +50,17 @@
             width: 0%;
             height: 2px;
             background: #2196f3;
-            transition: 0.3s;
-        }
-        .menu:hover::after { width: 100%; }
-
-        main {
-            padding: 30px;
-            font-family: Arial;
+            transition: 0.3s ease;
         }
 
-        label { font-weight: bold; }
-
-        footer {
-            background-color: #2196f3;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            color: white;
-        }
-
-        .form-box {
-            max-width: 400px;
-            padding: 20px;
-            background: #f1f1f1;
-            border-radius: 8px;
-        }
-
-        input, textarea {
+        .menu:hover::after {
             width: 100%;
-            padding: 8px;
-            margin: 8px 0;
-            border-radius: 6px;
-            border: 1px solid #aaa;
         }
-
-        button {
-            background: rgb(2, 0, 148);
-            border: none;
-            padding: 10px;
-            width: 100%;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background: #2196f3;
+        footer{
+          background-color: #2196f3;
         }
     </style>
 </head>
-
 <body>
     <nav>
         <header>SMK AMT</header>
@@ -97,31 +73,26 @@
     </nav>
 
     <main>
-        <h1>Kontak SMK AMT</h1>
-        <p>Silakan isi form di bawah untuk menghubungi kami.</p>
+        <article>
+            <h1>Kontak SMK AMT</h1>
+            <p>SMK AMT adalah sekolah menengah kejuruan
+                yang berfokus pada pengembangan keterampilan
+                di bidang teknologi dan manajemen. Kami
+                berkomitmen untuk memberikan pendidikan
+                berkualitas tinggi kepada siswa kami,
+                mempersiapkan mereka untuk menghadapi
+                tantangan di dunia kerja.</p>
+        </article>
 
-        <div class="form-box">
-            <label>Nama:</label>
-            <input type="text" placeholder="Nama lengkap">
-
-            <label>Email:</label>
-            <input type="email" placeholder="Alamat email">
-
-            <label>Pesan:</label>
-            <textarea rows="4" placeholder="Tulis pesan Anda..."></textarea>
-
-            <button>Kirim</button>
-        </div>
-
-        <h2>Alamat</h2>
-        <p>Jl. Pendidikan No. 45, Bandung, Jawa Barat</p>
-
-        <h2>Telepon</h2>
-        <p>+62 812-3456-7890</p>
+        <figure>
+            <img src="https://www.gardaoto.com/wp-content/uploads/2022/09/10-Pemandangan-Alam-Paling-Indah-yang-Wajib-Kalian-Datangi.jpg" 
+                 alt="Gambar Sekolah SMK AMT" width="600">
+            <figcaption>Gedung Utama SMK AMT</figcaption>
+        </figure>
     </main>
 
-    <footer>
-        <p>© 2025 SMK AMT. All rights reserved.</p>
+    <footer class="foot">
+        <p>&copy; 2025 SMK AMT. All rights reserved.</p>
     </footer>
 </body>
 </html>
