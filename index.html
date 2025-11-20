@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>textsematic</title>
-  </head>
-  <body>
-    <header>
-      <h1>SMK AL-MUJTAMA'</h1>
-      <p>SEKOLAH MENENGAH KEJURUAN</p>
-      <nav>
-        <a href="index.html">Branda</a>
-        <a href="profil.html">Profil</a>
-        <a href="jurusan.html">Jurusan</a>
-      </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: rgb(2, 0, 148);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navlink {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        header {
+            color: white;
+            font-size: 15px;
+            padding: 10px;
+        }
+        .menu {
+            position: relative;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .menu::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #2196f3;
+            transition: 0.3s ease;
+        }
+
+        .menu:hover::after {
+            width: 100%;
+        }
+        footer{
+          background-color: #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <header>SMK AMT</header>
+        <ul class="navlink">
+            <li><a href="index.html" class="menu">Home</a></li>
+            <li><a href="profil.html" class="menu">Profil</a></li>
+            <li><a href="tentang.html" class="menu">Tentang</a></li>
+            <li><a href="kontak.html" class="menu">Kontak</a></li>
+        </ul>
+    </nav>
+
     <main>
-      <article>
-        <h1>ini adalah latihan</h1>
-        <p>untuk menjadi pintar</p>
-      </article>
-      <figure>
-        <img src="img/download (4).jpg" width="200" alt="">
-        <figcaption>ini adalah gambar anime</figcaption>
-      </figure>
+        <article>
+            <h1>Selamat Datang di SMK AMT</h1>
+            <p>SMK AMT adalah sekolah menengah kejuruan
+                yang berfokus pada pengembangan keterampilan
+                di bidang teknologi dan manajemen. Kami
+                berkomitmen untuk memberikan pendidikan
+                berkualitas tinggi kepada siswa kami,
+                mempersiapkan mereka untuk menghadapi
+                tantangan di dunia kerja.</p>
+        </article>
+
+        <figure>
+            <img src="https://www.gardaoto.com/wp-content/uploads/2022/09/10-Pemandangan-Alam-Paling-Indah-yang-Wajib-Kalian-Datangi.jpg" 
+                 alt="Gambar Sekolah SMK AMT" width="600">
+            <figcaption>Gedung Utama SMK AMT</figcaption>
+        </figure>
     </main>
-    <footer>
-      <p>&copy; smks al-mujtama' @2025</p>
+
+    <footer class="foot">
+        <p>&copy; 2025 SMK AMT. All rights reserved.</p>
     </footer>
-  </body>
+</body>
 </html>

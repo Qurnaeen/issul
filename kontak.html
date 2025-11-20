@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - SMK AMT</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        nav {
+            background-color: rgb(2, 0, 148);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul li a { color: white; text-decoration: none; }
+        .navlink {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            padding: 10px;
+        }
+        header { color: white; font-size: 15px; padding: 10px; }
+        .menu {
+            position: relative;
+            padding: 8px 12px;
+            color: #ffffff;
+        }
+        .menu::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #2196f3;
+            transition: 0.3s;
+        }
+        .menu:hover::after { width: 100%; }
+
+        main {
+            padding: 30px;
+            font-family: Arial;
+        }
+
+        label { font-weight: bold; }
+
+        footer {
+            background-color: #2196f3;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .form-box {
+            max-width: 400px;
+            padding: 20px;
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            background: rgb(2, 0, 148);
+            border: none;
+            padding: 10px;
+            width: 100%;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #2196f3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <header>SMK AMT</header>
+        <ul class="navlink">
+            <li><a href="index.html" class="menu">Home</a></li>
+            <li><a href="profil.html" class="menu">Profil</a></li>
+            <li><a href="tentang.html" class="menu">Tentang</a></li>
+            <li><a href="kontak.html" class="menu">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Kontak SMK AMT</h1>
+        <p>Silakan isi form di bawah untuk menghubungi kami.</p>
+
+        <div class="form-box">
+            <label>Nama:</label>
+            <input type="text" placeholder="Nama lengkap">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Alamat email">
+
+            <label>Pesan:</label>
+            <textarea rows="4" placeholder="Tulis pesan Anda..."></textarea>
+
+            <button>Kirim</button>
+        </div>
+
+        <h2>Alamat</h2>
+        <p>Jl. Pendidikan No. 45, Bandung, Jawa Barat</p>
+
+        <h2>Telepon</h2>
+        <p>+62 812-3456-7890</p>
+    </main>
+
+    <footer>
+        <p>© 2025 SMK AMT. All rights reserved.</p>
+    </footer>
+</body>
+</html>
