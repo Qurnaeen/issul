@@ -65,6 +65,9 @@
         .menu:hover::after {
             width: 100%;
         }
+        .menu.active::after {
+            width: 100%; /* Garis penuh saat menu aktif */
+}
 
         footer {
             background-color: #2196f3;
@@ -82,7 +85,7 @@
             <li><a href="index.html" class="menu">Home</a></li>
             <li><a href="profil.html" class="menu">Profil</a></li>
             <li><a href="tentang.html" class="menu">Tentang</a></li>
-            <li><a href="kontak.html" class="menu">Kontak</a></li>
+            <li><a href="kontak.html" class="menu active">Kontak</a></li>
         </ul>
     </nav>
 
