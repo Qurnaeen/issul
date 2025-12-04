@@ -11,11 +11,33 @@
             box-sizing: border-box;
         }
 
+
         nav {
-            background-color: rgb(2, 0, 148);
+            background-color: rgb(2, 0, 148); /* Warna biru tua navbar */
+            display: flex; /* Membuat isi navbar sejajar horizontal */
+            justify-content: space-between; /* Nama sekolah di kiri, menu di kanan */
+            align-items: center; /* Menjaga semua item tetap ditengah vertikal */
+            padding: 10px;
+        }
+
+
+        header {
+            color: white; /* Warna teks putih */
+            font-size: 18px; /* Ukuran teks */
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 10px; /* Jarak logo dan tulisan */
+        }
+
+        header img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+        }
+        .navlink {
+            display: flex; /* Menu berjejer horizontal */
+            list-style: none; /* Menghilangkan bullet */
+            gap: 20px; /* Jarak antar menu */
         }
 
         ul li a {
@@ -23,22 +45,6 @@
             text-decoration: none;
         }
 
-        .navlink {
-            display: flex;
-            list-style: none;
-            gap: 15px;
-            padding: 10px;
-        }
-
-        header {
-            color: white;
-            font-size: 15px;
-            padding: 10px;
-        }
-        header img{
-            width: 30px;
-            height: 30px;
-        }
         .menu {
             position: relative;
             padding: 8px 12px;
@@ -56,12 +62,16 @@
             background: #2196f3;
             transition: 0.3s ease;
         }
-
         .menu:hover::after {
             width: 100%;
         }
-        footer{
-          background-color: #2196f3;
+
+        footer {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -90,7 +100,7 @@
 
         <figure>
             <img src="https://www.gardaoto.com/wp-content/uploads/2022/09/10-Pemandangan-Alam-Paling-Indah-yang-Wajib-Kalian-Datangi.jpg" 
-                 alt="Gambar Sekolah SMK AMT" width="600">
+                 alt="Gambar Sekolah SMK AMT" width="500">
             <figcaption>Gedung Utama SMK AMT</figcaption>
         </figure>
     </main>
