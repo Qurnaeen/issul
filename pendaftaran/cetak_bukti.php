@@ -198,12 +198,7 @@ if ($row_foto = mysqli_fetch_assoc($result_foto)) {
                     <tr>
                         <td><strong>Jenis Kelamin</strong></td>
                         <td>:</td>
-                        <td><?php echo ucfirst($siswa['jenis_kelamin']); ?></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Asal Sekolah</strong></td>
-                        <td>:</td>
-                        <td><?php echo escape_output($siswa['asal_sekolah']); ?></td>
+                        <td><?php echo ($siswa['jk'] == 'L' ? 'Laki-laki' : 'Perempuan'); ?></td>
                     </tr>
                     <tr>
                         <td><strong>Alamat</strong></td>
