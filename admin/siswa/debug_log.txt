@@ -1,0 +1,10 @@
+2025-12-27 00:01:40 - ID: 35, Status: lulus, Catatan: lulus
+SUCCESS UPDATING
+2025-12-27 00:01:55 - ID: 35, Status: lulus, Catatan: lulus dengan baik
+SUCCESS UPDATING
+2025-12-27 00:10:09 - ID: 4, Status: lulus, Catatan: lulus dengan syarat
+SUCCESS UPDATING
+2025-12-27 00:11:47 - ID: 5, Status: tidak_lulus, Catatan: cobak kapan lagi 😅
+SUCCESS UPDATING
+2025-12-27 00:18:42 - ID: 36, Status: tidak_lulus, Catatan: daftar kapan kapan lagi🤣
+SUCCESS UPDATING

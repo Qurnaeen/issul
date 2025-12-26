@@ -39,6 +39,32 @@ require_once __DIR__ . '/../templates/navbar.php';
     <!-- Welcome Section -->
     <div class="row mb-4">
         <div class="col-12">
+            <!-- Announcement Alert -->
+            <?php if ($siswa['status'] == 'lulus'): ?>
+            <div class="alert alert-success border-success shadow-sm mb-4" role="alert">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-trophy-fill fs-1 me-3"></i>
+                    <div>
+                        <h4 class="alert-heading fw-bold mb-1">SELAMAT! ANDA DITERIMA</h4>
+                        <p class="mb-0">Selamat, Anda dinyatakan <strong>LULUS</strong> seleksi PPDB <?php echo NAMA_SEKOLAH; ?>.</p>
+                        <hr>
+                        <p class="mb-0 small">Silakan cetak bukti pendaftaran dan lakukan daftar ulang sesuai jadwal yang ditentukan.</p>
+                    </div>
+                </div>
+            </div>
+            <?php elseif ($siswa['status'] == 'tidak_lulus'): ?>
+            <div class="alert alert-danger border-danger shadow-sm mb-4" role="alert">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-x-circle-fill fs-1 me-3"></i>
+                    <div>
+                        <h4 class="alert-heading fw-bold mb-1">MOHON MAAF</h4>
+                        <p class="mb-0">Mohon maaf, Anda dinyatakan <strong>TIDAK LULUS</strong> seleksi PPDB tahun ini.</p>
+                        <p class="mb-0 small">Tetap semangat dan jangan putus asa!</p>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
             <div class="card bg-primary text-white">
                 <div class="card-body p-4 d-flex align-items-center">
                     <div class="me-3">

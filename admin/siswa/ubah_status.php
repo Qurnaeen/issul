@@ -16,7 +16,7 @@ if (!isset($_GET['id']) || !isset($_GET['status'])) {
 }
 
 $siswa_id = intval($_GET['id']);
-$status = clean_input($_GET['status']);
+$status = strtolower(clean_input($_GET['status']));
 $catatan = isset($_GET['catatan']) ? clean_input($_GET['catatan']) : '';
 
 // Validasi status
@@ -30,13 +30,23 @@ $query = "UPDATE siswa SET status = ?, catatan_admin = ? WHERE id = ?";
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "ssi", $status, $catatan, $siswa_id);
 
+// DEBUG LOGGING
+$log_msg = date('Y-m-d H:i:s') . " - ID: $siswa_id, Status: $status, Catatan: $catatan\n";
+file_put_contents(__DIR__ . '/debug_log.txt', $log_msg, FILE_APPEND);
+
 if (mysqli_stmt_execute($stmt)) {
     // Log aktivitas
     log_aktivitas($conn, $_SESSION['admin_id'], 'Ubah Status Siswa', "Mengubah status siswa ID $siswa_id menjadi $status");
     
+    // DEBUG SUCCESS
+    file_put_contents(__DIR__ . '/debug_log.txt', "SUCCESS UPDATING\n", FILE_APPEND);
+
     header('Location: detail.php?id=' . $siswa_id . '&success=' . urlencode('Status berhasil diubah'));
     exit;
 } else {
+    // DEBUG ERROR
+    file_put_contents(__DIR__ . '/debug_log.txt', "ERROR: " . mysqli_error($conn) . "\n", FILE_APPEND);
+
     header('Location: detail.php?id=' . $siswa_id . '&error=' . urlencode('Gagal mengubah status'));
     exit;
 }

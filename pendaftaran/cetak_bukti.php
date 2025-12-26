@@ -210,6 +210,21 @@ if ($row_foto = mysqli_fetch_assoc($result_foto)) {
                         <td>:</td>
                         <td><?php echo format_datetime($siswa['created_at']); ?></td>
                     </tr>
+                    <tr>
+                        <td><strong>Status Seleksi</strong></td>
+                        <td>:</td>
+                        <td>
+                            <?php 
+                            if ($siswa['status'] == 'lulus') {
+                                echo '<span class="fw-bold text-uppercase">LULUS</span>';
+                            } elseif ($siswa['status'] == 'tidak_lulus') {
+                                echo '<span class="fw-bold text-uppercase">TIDAK LULUS</span>';
+                            } else {
+                                echo 'MENUNGGU PENGUMUMAN';
+                            }
+                            ?>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

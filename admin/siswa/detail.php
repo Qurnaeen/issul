@@ -291,7 +291,7 @@ function ubahStatus(status) {
         cancelButtonText: 'Batal'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = 'ubah_status.php?id=<?php echo $siswa_id; ?>&status=' + status + '&catatan=' + encodeURIComponent(result.value || '');
+            window.location.href = 'ubah_status.php?id=' + $siswa_id + '&status=' + status + '&catatan=' + encodeURIComponent(result.value || '');
         }
     });
 }
